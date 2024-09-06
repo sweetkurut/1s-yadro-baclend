@@ -13,14 +13,26 @@ import { Transaction } from './transactions/entities/transaction.entity';
       type: 'mssql',
       host: 'localhost',
       port: 1433,
-      username: 'sa',
-      password: '',
-      database: 'test-db',
-      entities: ["dist/**/*.entity{.ts,.js}"],
+      username: 'admin',
+      password: 'qwerty',
+      database: 'nestTest',
+      logging: true,
+      options: {
+        encrypt: false, 
+        trustServerCertificate: true, // доверять самоподписанным сертификатам
+      },
     }),
+    
     TypeOrmModule.forFeature([Account, AccountHistory, Transaction]),
   ],
   providers: [OperationService],
   controllers: [OperationController],
 })
 export class AppModule {}
+
+
+// DB_USER=admin
+// DB_PASSWORD=qwerty
+// DB_SERVER=localhost
+// DB_NAME=passControllApp
+// DB_PORT=1433
