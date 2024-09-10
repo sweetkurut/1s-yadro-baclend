@@ -13,13 +13,13 @@ import { Transaction } from './transactions/entities/transaction.entity';
       type: 'mssql',
       host: 'localhost',
       port: 1433,
-      username: 'admin',
-      password: 'qwerty',
-      database: 'nestTest',
+      username: 'DESKTOP-R768RPL',
+      password: '',
+      database: 'test_db',
       logging: true,
       options: {
-        encrypt: false, 
-        trustServerCertificate: true, // доверять самоподписанным сертификатам
+        // encrypt: false, 
+        trustServerCertificate: true, 
       },
     }),
     
